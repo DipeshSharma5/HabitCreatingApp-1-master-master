@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pushkar.habitcreatingapp">
+<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"></activity>
+        <activity android:name=".Activity.FinanceActivity" />
+        <activity android:name=".Activity.HealthActivity" />
+        <activity android:name=".Activity.SocialActivity" />
+        <activity android:name=".Activity.SpiritualActivity" />
+        <activity android:name=".Activity.RelationshipsActivity" />
+        <activity android:name=".Activity.ProductivityActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginActivity" />
+        </activity>
+        <activity android:name=".AddRitual">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".setting"></activity>
+        <receiver android:name=".Models.MyAlarm"
+            android:enabled="true"
+            android:exported="true"/>
+    </application>
+
+</manifest>

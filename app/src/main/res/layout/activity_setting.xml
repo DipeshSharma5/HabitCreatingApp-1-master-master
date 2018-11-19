@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad_bg"
+
+    tools:context="setting">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Out"
+            android:background="@drawable/btn_bg"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:id="@+id/signOut"/>
+
+        <Button
+            android:layout_below="@+id/signOut"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:text="Delete Account"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:id="@+id/delete"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/delete"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/linear"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/oldPass"
+                android:background="@drawable/et_bg"
+                android:inputType="textPassword"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:hint="Enter Old Pasword"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/newPass"
+                android:inputType="textPassword"
+                android:background="@drawable/et_bg"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:hint="Enter New Password"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/reNewPass"
+                android:background="@drawable/et_bg"
+                android:inputType="textPassword"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:hint="Re Enter Password"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear"
+            android:background="@drawable/btn_bg"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Change Password"
+            android:id="@+id/change"/>
+    </RelativeLayout>
+
+</RelativeLayout>
