@@ -2,6 +2,7 @@ package com.example.pushkar.habitcreatingapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     DatabaseReference myRef;
     private FirebaseAuth.AuthStateListener mAuthListener;
     String username,z;
-    List<RitualData> ritualDataList;
+    public static ArrayList<RitualData> ritualDataList;
     String userID;
 
 
@@ -96,6 +97,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
                 }
             });
+
         }
 
         return super.onOptionsItemSelected(item);
